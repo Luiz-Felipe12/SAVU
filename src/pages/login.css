@@ -1,0 +1,78 @@
+.form-label {
+    font-size: 16px;
+    text-align: left;
+}
+
+.button {
+    margin-top: 1.0rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+  
+.button-register {
+    background: #B3672D;
+    color: white;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+  
+.button-register:hover {
+    background-color: #EDEDEE;
+    color: #B3672D;
+    border-color: #B3672D;
+    border: solid 1px;
+}
+  
+.button-login {
+    background: green;
+    color: white;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+  
+.button-login:hover {
+    background-color: #EDEDEE;
+    color: green;
+    border-color:green ;
+    border: solid 1px;
+}
+
+.input-field {
+
+}
+  
+.input-field:hover {
+    background-color: #EDEDEE;
+}
+
+.top-bar{
+    background-color: #EDEDEE;
+    display: flex;
+    align-items: center;
+}
+.top-bar span {
+    margin-right: 1rem;
+}
+
+.top-bar span:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
+    margin: 0 0.5rem;
+  }
+
+.icons{
+    width: 32px;
+    height: 32px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+  }
