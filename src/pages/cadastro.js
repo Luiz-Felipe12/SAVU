@@ -71,8 +71,8 @@ const CadastroScreen = () => {
 
   return (
     <div style={{ background: '#EDEDEE', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-      <h1 style={{ position: 'absolute', top: '80px', left: '760px', color: '#393C47', fontSize: '70px' }}>SAVU</h1>
-      <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '1rem', position: 'absolute', top: '30px', left: '950px', paddingTop: '60px' }} />
+      <h1 style={{ position: 'absolute', top: '-20px', left: '760px', color: '#393C47', fontSize: '70px' }}>SAVU</h1>
+      <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '1rem', position: 'absolute', top: '-30px', left: '950px', paddingTop: '20px' }} />
       <h2 style={{ marginTop: '6rem', color: '#393C47', paddingBottom:'10px', paddingTop:'15px' }}>Sistema de Agendamento de Visitas à UFAPE</h2>
       <div style={{ background: 'white', padding: '2rem', marginTop: '0.3rem', width: '800px', display: 'flex', justifyContent: 'space-between', borderRadius: '8%' }}>
         {/* Primeira coluna */}
