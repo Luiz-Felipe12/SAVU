@@ -16,6 +16,7 @@
     width: 400px;
     border-radius: 10%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -8rem;
   }
   
   /* Estilos do formulário */
@@ -52,13 +53,15 @@
   
   /* Estilos do botão de enviar */
   .button-enviar {
-    background-color: #393C47;
+    background: #007BFF;
     color: white;
     border: none;
-    border-radius: 5%;
-    padding: 0.5rem 1rem;
-    font-size: 16px;
+    border-radius: 20px; /* Valor maior para tornar o botão mais arredondado */
+    padding: 0.5rem 2rem; /* Reduza o valor do padding para tornar o botão menor */
+    font-size: 18px;
     cursor: pointer;
     width: 100%;
+    max-width: 200px; /* Defina uma largura máxima para o botão */
   }
+
   

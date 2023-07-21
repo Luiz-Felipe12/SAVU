@@ -70,11 +70,13 @@ const CadastroScreen = () => {
   };
 
   return (
-    <div style={{ background: '#EDEDEE', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-      <h1 style={{ position: 'absolute', top: '-20px', left: '760px', color: '#393C47', fontSize: '70px' }}>SAVU</h1>
-      <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '1rem', position: 'absolute', top: '-30px', left: '950px', paddingTop: '20px' }} />
-      <h2 style={{ marginTop: '6rem', color: '#393C47', paddingBottom:'10px', paddingTop:'15px' }}>Sistema de Agendamento de Visitas à UFAPE</h2>
-      <div style={{ background: 'white', padding: '2rem', marginTop: '0.3rem', width: '800px', display: 'flex', justifyContent: 'space-between', borderRadius: '8%' }}>
+    <div style={{ background: '#EDEDEE', height: '130vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+     <div style={{ display: 'flex', alignItems: 'center', marginBottom: '-5rem', marginTop:'-15rem'}}>
+        <h1 style={{ color: '#393C47', fontSize: '70px', marginLeft: '2rem',marginTop: '15rem' }}>SAVU</h1>
+        <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '10rem', marginLeft: '1rem' }} />
+      </div>
+      <h2 style={{ marginTop: '4rem', color: '#393C47', paddingBottom:'10px', paddingTop:'15px' }}>Sistema de Agendamento de Visitas à UFAPE</h2>
+      <div style={{ background: 'white', padding: '2rem', marginTop: '0.3rem', width: '800px', display: 'flex', justifyContent: 'space-between', borderRadius: '8%', boxshadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
         {/* Primeira coluna */}
         <div style={{ flex: 1, marginRight: '1rem', textAlign: 'center' }}>
           <h1 style={{ color: '#393C47', textAlign:'left'}}>Cadastro</h1>

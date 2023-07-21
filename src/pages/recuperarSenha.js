@@ -15,7 +15,7 @@ const RecuperarSenhaScreen = () => {
   };
 
   return (
-    <div style={{ background: '#EDEDEE', height: 'calc(100vh - 40px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}>
+    <div style={{ background: '#EDEDEE', height: 'calc(100vh)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '2rem'}}>
         <h1 style={{ color: '#393C47', fontSize: '70px', marginLeft: '2rem',marginTop: '5rem' }}>SAVU</h1>
         <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '1rem', marginLeft: '1rem' }} />

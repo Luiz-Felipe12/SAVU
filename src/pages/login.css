@@ -39,6 +39,21 @@
     border: solid 1px;
 }
   
+.button-enviar {
+    background: #007BFF;
+    color: white;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button-enviar:hover {
+    background-color: #EDEDEE;
+    color: #007BFF;
+    border-color:#007BFF ;
+    border: solid 1px;
+}
+
+
 .button-login {
     background: green;
     color: white;

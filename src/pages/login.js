@@ -69,7 +69,7 @@ const LoginScreen = () => {
         <h1 style={{ color: '#393C47', fontSize: '70px', marginBottom: '1rem', marginRight:'4rem' }}>SAVU</h1>
         <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '3rem', position: 'absolute', top: '100px', left: '49.5%', transform: 'translateX(-50%)', marginLeft:'8rem' }} />
         <h2 style={{ marginTop: '2rem', color: '#393C47'}}>Sistema de Agendamento de Visitas à UFAPE</h2>
-        <div style={{ background: 'white', padding: '1rem', marginTop: '1rem', width: '400px', height: '350px', textAlign: 'center', borderRadius: '10%' }}>
+        <div style={{ background: 'white', padding: '1rem', marginTop: '1rem', width: '400px', height: '350px', textAlign: 'center', borderRadius: '10%', boxshadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
           <h1 style={{ color: '#393C47', fontSize: '40px' }}>Login</h1>
           <div style={{ fontSize: '20px', textAlign: 'left' }}>Email:</div>
           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', position: 'relative' }}>
