@@ -66,7 +66,9 @@
     border-color:rgba(255, 0, 0, 0.76) ;
     border: solid 1px;
 }
-
+.input-field{
+    font-size: 40px;
+}
 
 .input-field:hover {
     background-color: #EDEDEE;
@@ -88,6 +90,7 @@
     display: inline-block;
     width: 1px;
     height: 12px;
+
     background-color: #ccc;
     margin: 0 0.5rem; 
 }
@@ -117,6 +120,12 @@
 
 .link-no-underline {
     text-decoration: none;
+}
+
+.link_recovery_password{
+    text-align:'left';
+    color: red;
+    font-size: 15px
 }
 
 /* Adicione estas classes ao seu arquivo login.css */

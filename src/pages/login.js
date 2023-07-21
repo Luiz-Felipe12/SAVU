@@ -65,28 +65,31 @@ const LoginScreen = () => {
           </span>
         </div>
       </div>
-      <div style={{ background: '#EDEDEE', height: 'calc(100vh - 40px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}>
-        <h1 style={{ position: 'absolute', top: '90px', left: '760px', color: '#393C47', fontSize: '70px' }}>SAVU</h1>
-        <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '1rem', position: 'absolute', top: '80px', left: '950px', paddingTop: '20px' }} />
-        <h2 style={{ marginTop: '4rem', color: '#393C47' }}>Sistema de Agendamento de Visitas à UFAPE</h2>
-        <div style={{ background: 'white', padding: '1rem', marginTop: '1rem', width: '400px', height: '300px', textAlign: 'center', borderRadius: '10%' }}>
-          <h1 style={{ color: '#393C47' }}>Login</h1>
+      <div style={{ background: '#EDEDEE', height: 'calc(100vh - 30px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}>
+        <h1 style={{ color: '#393C47', fontSize: '70px', marginBottom: '1rem', marginRight:'4rem' }}>SAVU</h1>
+        <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '3rem', position: 'absolute', top: '100px', left: '49.5%', transform: 'translateX(-50%)', marginLeft:'8rem' }} />
+        <h2 style={{ marginTop: '2rem', color: '#393C47'}}>Sistema de Agendamento de Visitas à UFAPE</h2>
+        <div style={{ background: 'white', padding: '1rem', marginTop: '1rem', width: '400px', height: '350px', textAlign: 'center', borderRadius: '10%' }}>
+          <h1 style={{ color: '#393C47', fontSize: '40px' }}>Login</h1>
           <div style={{ fontSize: '20px', textAlign: 'left' }}>Email:</div>
           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', position: 'relative' }}>
-            <input type="email" id="email" value={email} onChange={handleEmailChange} className="input-field" style={{ flex: '1', marginRight: '0.5rem', width: '100%', border: 'none', backgroundColor: '#e9e9e9', height: '2rem', borderRadius: '5%', fontSize: '16px' }} />
+            <input placeholder="Digite seu e-mail" type="email" id="email" value={email} onChange={handleEmailChange} className="input-field" style={{ flex: '1', marginRight: '0.5rem', width: '100%', border: 'none', backgroundColor: '#e9e9e9', height: '2rem', borderRadius: '5%', fontSize: '19px' }} />
           </div>
           <div style={{ fontSize: '20px', textAlign: 'left' }}>Senha:</div>
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', position: 'relative' }}>
-            <input type={showPassword ? 'text' : 'password'} id="password" value={password} className="input-field" onChange={handlePasswordChange} style={{ flex: '1', marginRight: '0.5rem', paddingRight: '3rem', maxWidth: '100%', backgroundColor: '#e9e9e9', border: 'none', height: '2rem', borderRadius: '5%', fontSize: '16px' }} />
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', position: 'relative'}}>
+            <input placeholder="Digite sua senha" type={showPassword ? 'text' : 'password'} id="password" value={password} className="input-field" onChange={handlePasswordChange} style={{ flex: '1', marginRight: '0.5rem', paddingRight: '3rem', maxWidth: '100%', backgroundColor: '#e9e9e9', border: 'none', height: '2rem', borderRadius: '5%', fontSize: '19px' }} />
             {showPassword ? (
               <FaEye onClick={handleShowPassword} style={eyeIconStyle} />
             ) : (
               <FaEyeSlash onClick={handleShowPassword} style={eyeIconStyle} />
             )}
           </div>
-          <div className="login-buttons">
+          <div style={{ flex: '1', textAlign: 'left' }}>
+            <Link to="/recuperar" className="link_recovery_password link-no-underline">Esqueceu a Senha?</Link>
+          </div>
+          <div className="login-buttons" style={{ paddingTop: '20px', paddingBottom: '20px', alignItems: 'center' }}>
             <Link to="/cadastro" className="button button-register link-no-underline">Cadastrar</Link>
-            <button onClick={handleLogin} className="button button-login">Entrar</button>
+            <Link to="/" className="button button-login link-no-underline" onClick={handleLogin}>Entrar</Link>
           </div>
         </div>
       </div>
