@@ -89,7 +89,7 @@ const LoginScreen = () => {
           </div>
           <div className="login-buttons" style={{ paddingTop: '20px', paddingBottom: '20px', alignItems: 'center' }}>
             <Link to="/cadastro" className="button button-register link-no-underline">Cadastrar</Link>
-            <Link to="/" className="button button-login link-no-underline" onClick={handleLogin}>Entrar</Link>
+            <Link to="/home" className="button button-login link-no-underline" onClick={handleLogin}>Entrar</Link>
           </div>
         </div>
       </div>
