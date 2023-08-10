@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaUser, FaQuestion, FaPlus, FaCalendarAlt, FaEdit, FaTrashAlt,FaSearch } from 'react-icons/fa';
+import './login.css';
 
 const PrincipalScreen = () => {
   const iconStyle = {
@@ -51,11 +52,12 @@ const PrincipalScreen = () => {
             <input type="text" placeholder="Pesquisar..." style={{ padding: '0.5rem', borderRadius: '5px', border: 'none', outline: 'none', fontSize: '14px' }} />
           </div>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <button className="button button-login link-no-underline" style={{ background: '#b3672d', color: 'white', border: 'none', padding: '0.5rem 1rem', borderRadius: '5px', display: 'flex', alignItems: 'center', padding:'0.8rem'}}>
+            <Link to="/tipo"className="button button-tipo link-no-underline" >
               <FaQuestion style={{ marginRight: '0.5rem' }} />
               Tipo de Visitas
-            </button>
-            <button className="button button-login link-no-underline" style={{ background: '#2e3039', color: 'white', border: 'none', padding: '0.5rem 1rem', borderRadius: '5px', display: 'flex', alignItems: 'center', padding:'0.8rem' }}>
+            </Link>
+          
+            <button className="button button-agendar link-no-underline">
               <FaPlus style={{ marginRight: '0.5rem' }} />
               Agendar uma visita
             </button>
@@ -66,7 +68,7 @@ const PrincipalScreen = () => {
         <div style={{ boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)' }}>
         {/* Tabela de Dados */}
         {/* Cabeçalho */}
-        <div style={{ display: 'flex', background: 'white', padding: '1rem', fontWeight: 'bold', fontSize: '18px', gap: '1rem', alignItems: 'center', marginTop: '1.5rem' }}>
+        <div style={{ display: 'flex', borderBottom: '1px solid #ccc', background: 'white', padding: '1rem', fontWeight: 'bold', fontSize: '18px', gap: '1rem', alignItems: 'center', marginTop: '1.5rem' }}>
           <div style={{ flex: '1' }}>Visita</div>
           <div style={{ flex: '1' }}>Data</div>
           <div style={{ flex: '1' }}>Horário início</div>

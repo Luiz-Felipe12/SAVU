@@ -53,6 +53,36 @@
     border: solid 1px;
 }
 
+.button-tipo {
+    background:#b3672d;
+    color: white;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 0.8rem;
+}
+
+.button-tipo:hover {
+    background-color: #EDEDEE;
+    color: #b3672d;
+    border-color:#b3672d ;
+    border: solid 1px;
+}
+
+
+.button-agendar {
+    background:#2e3039;
+    color: white;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 0.8rem;
+}
+
+.button-agendar:hover {
+    background-color: #EDEDEE;
+    color:#2e3039;
+    border-color:#2e3039 ;
+    border: solid 1px;
+}
 
 .button-login {
     background: green;

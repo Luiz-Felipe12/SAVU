@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import RecuperarSenhaScreen from './pages/recuperarSenha';
 import TrocarSenhaScreen from './pages/trocarSenha';
 import PrincipalScreen from './pages/principal';
+import DescricaoScreen from './pages/descricao';
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/recuperar" element={<RecuperarSenhaScreen/>} />
           <Route path='/trocarsenha' element={<TrocarSenhaScreen/>} />
           <Route path='/home' element={<PrincipalScreen/>} />
+          <Route path='/tipo' element={<DescricaoScreen/>} />
         </Routes>
         
     </Router>
