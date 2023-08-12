@@ -111,6 +111,20 @@
     border-color:rgba(255, 0, 0, 0.76) ;
     border: solid 1px;
 }
+
+.button-bloquear {
+    background: #972e3f;
+    color: white;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button-bloquear:hover {
+    background-color: #EDEDEE;
+    color:#972e3f;
+    border-color:#972e3f;
+    border: solid 1px;
+}
 .input-field{
     font-size: 40px;
 }
@@ -231,4 +245,22 @@
     outline: none;
     box-shadow: 0 0 3px 2px white; /* Adicione o box-shadow com a cor branca */
   }
+
+  /* Personaliza a cor das setas do carrossel */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  color: rgb(18, 152, 230); /* Cor do ícone das setas */
+}
+
+/* Personaliza a cor dos pontos indicadores do carrossel */
+.custom-carousel .carousel-indicators li {
+  background-color: rgb(10, 187, 231);
+  color: rgb(18, 152, 230); /* Cor do ícone das setas */
+}
+
+/* Personaliza a cor ativa dos pontos indicadores */
+.custom-carousel .carousel-indicators .active {
+  color: rgb(18, 152, 230); /* Cor do ícone das setas */
+  background-color: rgb(10, 187, 231); /* Altere para a cor desejada */
+}
   
