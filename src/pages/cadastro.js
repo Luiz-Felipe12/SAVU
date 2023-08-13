@@ -72,8 +72,8 @@ const CadastroScreen = () => {
   return (
     <div style={{ background: '#EDEDEE', height: '130vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '-5rem', marginTop:'-15rem'}}>
-        <h1 style={{ color: '#393C47', fontSize: '70px', marginLeft: '2rem',marginTop: '15rem' }}>SAVU</h1>
-        <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '10rem', marginLeft: '1rem' }} />
+        <h1 style={{ color: '#393C47', fontSize: '70px', marginLeft: '2rem',marginTop: '4rem', }}>SAVU</h1>
+        <img src="/imgs/logo.png" alt="Logo" style={{ width: '100px', marginTop: '1rem', marginLeft: '1rem' }} />
       </div>
       <h2 style={{ marginTop: '4rem', color: '#393C47', paddingBottom:'10px', paddingTop:'15px' }}>Sistema de Agendamento de Visitas à UFAPE</h2>
       <div style={{ background: 'white', padding: '2rem', marginTop: '0.3rem', width: '800px', display: 'flex', justifyContent: 'space-between', borderRadius: '8%', boxshadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
