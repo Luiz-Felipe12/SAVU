@@ -58,7 +58,7 @@ const PrincipalAdmScreen = () => {
                   type="checkbox"
                   checked={isBlocked}
                   onChange={() => setIsBlocked(!isBlocked)}
-                  style={{ marginLeft: '0.5rem', width: '20px', height: '20px', background: '#f2f2f2', border: 'none' }}
+                  style={{ marginLeft: '0.5rem', width: '20px', height: '20px', background: '#f2f2f2', border: 'none', marginRight:'0.3rem' }}
                 />
                 Bloqueado
               </label>
