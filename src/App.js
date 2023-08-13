@@ -7,6 +7,7 @@ import TrocarSenhaScreen from './pages/trocarSenha';
 import PrincipalScreen from './pages/principal';
 import DescricaoScreen from './pages/descricao';
 import PrincipalAdmScreen from './pages/principalAdm';
+import DescricaoAdmScreen from './pages/descricaoAdm';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/home' element={<PrincipalScreen/>} />
           <Route path='/homeAdm' element={<PrincipalAdmScreen/>} />
           <Route path='/tipo' element={<DescricaoScreen/>} />
+          <Route path='/tipoAdm' element={<DescricaoAdmScreen/>} />
         </Routes>
         
     </Router>

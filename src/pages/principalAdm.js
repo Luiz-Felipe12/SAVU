@@ -8,6 +8,7 @@ const PrincipalAdmScreen = () => {
   const [showModal, setShowModal] = useState(false);
   const [isBlocked, setIsBlocked] = useState(false);
   const [period, setPeriod] = useState('1 semana');
+
   const iconStyle = {
     marginRight: '0.5rem',
     verticalAlign: 'middle',
@@ -37,55 +38,52 @@ const PrincipalAdmScreen = () => {
       </div>
       {/*modal de bloquei*/}
       {showModal && (
-  <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-    <div style={{ background: 'white', padding: '1rem', borderRadius: '8px', width: '400px', fontSize: '16px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <h3 style={{ fontSize: '20px' }}>Bloquear/Desbloquear Usuário</h3>
-        <button onClick={() => setShowModal(false)} style={{ border: 'none', background: 'none', cursor: 'pointer', fontSize: '20px' }}>X</button>
-      </div>
-      <div style={{ marginBottom: '1rem' }}>
-        <label style={{ marginBottom: '0.5rem', fontSize: '18px' }}>Usuário Visitante:</label>
-        <select style={{ width: '100%', padding: '0.5rem', borderRadius: '5px', background: '#f2f2f2', fontSize: '16px', border: 'none' }}>
-          <option value="opcao1">Irineu</option>
-          <option value="opcao2">Adamastor</option>
-          {/* Adicione mais opções conforme necessário */}
-        </select>
-      </div>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-        <label style={{ marginRight: '0.5rem', fontSize: '18px' }}>
-          <input
-            type="checkbox"
-            checked={isBlocked}
-            onChange={() => setIsBlocked(!isBlocked)}
-            style={{ marginLeft: '0.5rem', width: '20px', height: '20px', background: '#f2f2f2', border: 'none' }}
-          />
-          Bloqueado
-        </label>
-      </div>
-      {isBlocked && (
-        <div style={{ marginBottom: '1rem' }}>
-          <label style={{ marginBottom: '0.5rem', fontSize: '18px' }}>Período:</label>
-          <select value={period} onChange={(e) => setPeriod(e.target.value)} style={{ width: '100%', padding: '0.5rem', borderRadius: '5px', background: '#f2f2f2', fontSize: '16px', border: 'none' }}>
-            <option value="1 semana">1 semana</option>
-            <option value="2 semanas">2 semanas</option>
-            <option value="3 semanas">3 semanas</option>
-            <option value="1 mês">1 mês</option>
-            <option value="2 meses">2 meses</option>
-            <option value="3 meses">3 meses</option>
-            <option value="1 ano">1 ano</option>
-          </select>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ background: 'white', padding: '1rem', borderRadius: '8px', width: '400px', fontSize: '16px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+              <h3 style={{ fontSize: '20px' }}>Bloquear/Desbloquear Usuário</h3>
+              <button onClick={() => setShowModal(false)} style={{ border: 'none', background: 'none', cursor: 'pointer', fontSize: '20px' }}>X</button>
+            </div>
+            <div style={{ marginBottom: '1rem' }}>
+              <label style={{ marginBottom: '0.5rem', fontSize: '18px' }}>Usuário Visitante:</label>
+              <select style={{ width: '100%', padding: '0.5rem', borderRadius: '5px', background: '#f2f2f2', fontSize: '16px', border: 'none' }}>
+                <option value="opcao1">Irineu</option>
+                <option value="opcao2">Adamastor</option>
+                {/* Adicione mais opções conforme necessário */}
+              </select>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+              <label style={{ marginRight: '0.5rem', fontSize: '18px' }}>
+                <input
+                  type="checkbox"
+                  checked={isBlocked}
+                  onChange={() => setIsBlocked(!isBlocked)}
+                  style={{ marginLeft: '0.5rem', width: '20px', height: '20px', background: '#f2f2f2', border: 'none' }}
+                />
+                Bloqueado
+              </label>
+            </div>
+            {isBlocked && (
+              <div style={{ marginBottom: '1rem' }}>
+                <label style={{ marginBottom: '0.5rem', fontSize: '18px' }}>Período:</label>
+                <select value={period} onChange={(e) => setPeriod(e.target.value)} style={{ width: '100%', padding: '0.5rem', borderRadius: '5px', background: '#f2f2f2', fontSize: '16px', border: 'none' }}>
+                  <option value="1 semana">1 semana</option>
+                  <option value="2 semanas">2 semanas</option>
+                  <option value="3 semanas">3 semanas</option>
+                  <option value="1 mês">1 mês</option>
+                  <option value="2 meses">2 meses</option>
+                  <option value="3 meses">3 meses</option>
+                  <option value="1 ano">1 ano</option>
+                </select>
+              </div>
+            )}
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
+              <button className="button button-cancel link-no-underline" style={{ fontSize: '16px' }} onClick={() => setShowModal(false)}>Cancelar</button>
+              <button className="button button-login link-no-underline" style={{ fontSize: '16px' }} onClick={() => console.log('Confirmar')}>Confirmar</button>
+            </div>
+          </div>
         </div>
       )}
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
-        <button className="button button-cancel link-no-underline" style={{ fontSize: '16px' }} onClick={() => setShowModal(false)}>Cancelar</button>
-        <button className="button button-login link-no-underline" style={{ fontSize: '16px' }} onClick={() => console.log('Confirmar')}>Confirmar</button>
-      </div>
-    </div>
-  </div>
-)}
-
-
-
 
       {/* Conteúdo Principal */}
       <div style={{ padding: '2rem' }}>
@@ -112,15 +110,12 @@ const PrincipalAdmScreen = () => {
               <FaLock  style={{ marginRight: '0.5rem' }} />
               Bloquear/Desbloquear Usuário
             </Link>
-            <Link to="/tipo"className="button button-tipo link-no-underline" >
+            <Link to="/tipoadm"className="button button-tipo link-no-underline" >
               <FaQuestion style={{ marginRight: '0.5rem' }} />
               Tipo de Visitas
-            </Link>
-          
-            
+            </Link>           
           </div>
         </div>
-
 
         <div style={{ boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)' }}>
         {/* Tabela de Dados */}
@@ -132,6 +127,7 @@ const PrincipalAdmScreen = () => {
           <div style={{ flex: '1' }}>Horário término</div>
           <div style={{ flex: '1' }}>Status</div>
           <div style={{ flex: '1', textAlign: 'center' }}>Visitante</div>
+          <div style={{ flex: '1', textAlign: 'center' }}>Professor</div>
           
         </div>
 
@@ -147,6 +143,9 @@ const PrincipalAdmScreen = () => {
             <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               Irineu
             </div>
+            <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              Mateus
+            </div>
           </div>
 
 
@@ -159,6 +158,9 @@ const PrincipalAdmScreen = () => {
             <div style={{ flex: '1', color:'#5aab80'}}>Realizada</div>
             <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               Adamastor
+            </div>
+            <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              Rodrigo
             </div>
           </div>
         </div>

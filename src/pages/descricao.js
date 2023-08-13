@@ -38,7 +38,7 @@ const DescricaoScreen = () => {
   return (
     <div style={{ background: '#EDEDEE', minHeight: '100vh', paddingBottom: '2rem' }}>
       {/* Top Bar */}
-      <div style={{ background: '#2e3039', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem 2rem' }}>
+      <div style={{ background: '#2e3039', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem 2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <FaBars style={{ marginRight: '1rem', cursor: 'pointer' }} />
         </div>
