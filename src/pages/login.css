@@ -333,5 +333,23 @@
     width: 100%;
     color: #333;
   }
+
+  .date-color-1 {
+    background-color: red;
+  }
+
+  .date-color-2 {
+    background-color: lightgreen;
+  }
   
+  .custom-datepicker {
+    width: 300px; /* Defina o valor desejado */
+    height: 40px; /* Defina o valor desejado */
+    font-size: 16px; /* Defina o valor desejado */
+  }
+  
+  /* Aumentar o tamanho do calendário do DatePicker */
+  .react-datepicker__calendar-container {
+    width: 350px; /* Defina o valor desejado */
+  }
   

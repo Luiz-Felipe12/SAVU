@@ -204,10 +204,6 @@ const DescricaoAdmScreen = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-
-
-
-
     </div>
   );
 };

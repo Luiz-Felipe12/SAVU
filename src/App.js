@@ -8,6 +8,7 @@ import PrincipalScreen from './pages/principal';
 import DescricaoScreen from './pages/descricao';
 import PrincipalAdmScreen from './pages/principalAdm';
 import DescricaoAdmScreen from './pages/descricaoAdm';
+import PrincipalProfScreen from './pages/principalProf';
 
 
 const App = () => {
@@ -19,7 +20,8 @@ const App = () => {
           <Route path="/recuperar" element={<RecuperarSenhaScreen/>} />
           <Route path='/trocarsenha' element={<TrocarSenhaScreen/>} />
           <Route path='/home' element={<PrincipalScreen/>} />
-          <Route path='/homeAdm' element={<PrincipalAdmScreen/>} />
+          <Route path='/homeadm' element={<PrincipalAdmScreen/>} />
+          <Route path='/homeprof' element={<PrincipalProfScreen/>} />
           <Route path='/tipo' element={<DescricaoScreen/>} />
           <Route path='/tipoAdm' element={<DescricaoAdmScreen/>} />
         </Routes>

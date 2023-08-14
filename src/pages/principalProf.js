@@ -8,22 +8,10 @@ import 'react-datepicker/dist/react-datepicker.css';
 import ptBR from 'date-fns/locale/pt-BR'; // Importa a localização em português
 import './login.css'; // Importa seu arquivo CS
 
-const PrincipalScreen = () => {
-  const iconStyle = {
-    marginRight: '0.5rem',
-    verticalAlign: 'middle',
-  };
 
-  const handleEditClick = () => {
-    console.log('Clicou em Editar');
-    // Adicione sua lógica de edição aqui
-  };
+const PrincipalProfScreen = () => {
 
-  const handleDeleteClick = () => {
-    console.log('Clicou em Excluir');
-    // Adicione sua lógica de exclusão aqui
-  };
-  const [showHabilitarVagasModal, setShowHabilitarVagasModal] = useState(false);
+const [showHabilitarVagasModal, setShowHabilitarVagasModal] = useState(false);
 const [selectedTipoVisita, setSelectedTipoVisita] = useState('');
 const [selectedDate, setSelectedDate] = useState(null);
 
@@ -51,7 +39,22 @@ const handleFileChange = (e) => {
     setSelectedFiles((prevSelected) => [...prevSelected, ...files]);
     e.target.value = null; // Clear the input
 };
+  const iconStyle = {
+    marginRight: '0.5rem',
+    verticalAlign: 'middle',
+  };
+
+  const handleEditClick = () => {
+    console.log('Clicou em Editar');
+    // Adicione sua lógica de edição aqui
+  };
+
+  const handleDeleteClick = () => {
+    console.log('Clicou em Excluir');
+    // Adicione sua lógica de exclusão aqui
+  };
   
+
   // Função para abrir o modal de "Habilitar Vagas"
   const handleShowHabilitarVagas = () => {
     setShowHabilitarVagasModal(true);
@@ -87,7 +90,7 @@ const handleFileChange = (e) => {
   }
   return ''; // Retorna uma string vazia para outras datas
 }
-
+  
   return (
     <div style={{ background: '#EDEDEE', height: '100vh' }}>
       {/* Top Bar */}
@@ -126,10 +129,16 @@ const handleFileChange = (e) => {
               Tipo de Visitas
             </Link>
           
-            <button onClick={()=>setShowHabilitarVagasModal(true)} className="button button-agendar link-no-underline">
-              <FaPlus style={{ marginRight: '0.5rem' }} />
-              Agendar uma visita
+            <button onClick={() => setShowModal(true)} className="button button-agendar link-no-underline">
+              <FaFileAlt  style={{ marginRight: '0.5rem' }} />
+              Solicitar tipo de visita
             </button>
+
+            <button onClick={()=>setShowHabilitarVagasModal(true)}className="button button-agendar link-no-underline">
+              <FaKey   style={{ marginRight: '0.5rem' }} />
+              Habilitar Vagas
+            </button>
+
           </div>
         </div>
 
@@ -186,10 +195,101 @@ const handleFileChange = (e) => {
         </div>
         </div>
       </div>
+      {/* Modal */}
+      {/* Modal de solicitar visita */}
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Solicitar um tipo de Visita</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div style={{ marginBottom: '1rem' }}>
+            <label>Nome:</label>
+            <input type="text" className="custom-input" />
+          </div>
+          <div style={{ marginBottom: '1rem' }}>
+            <label>Descrição:</label>
+            <textarea className="custom-input" rows="4"></textarea>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', marginBottom:'0.8rem' }}>
+            <label style={{ marginBottom: '0.5rem' }}>Imagens:</label>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <label htmlFor="image-input" className="add-image-button">
+                <FaImage  style={{ marginRight: '0.2rem', marginBottom:'0.3rem', marginLeft:'0.2rem' }} />
+              </label>
+              <input
+                id="image-input"
+                type="file"
+                multiple
+                accept="image/*"
+                style={{ display: 'none' }}
+                onChange={handleFileChange}
+              />
+              <small style={{ color: 'red', marginLeft: '0.5rem' }}>Máximo de 3 imagens</small>
+            </div>
+          </div>
+          {selectedFiles.length > 0 && (
+            <div style={{ marginBottom: '1rem' }}>
+              <label>Imagens selecionadas:</label>
+              <ul style={{ listStyleType: 'none', padding: 0 }}>
+                {selectedFiles.map((file, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
+                    <div
+                      style={{
+                        backgroundColor: 'lightgray',
+                        borderRadius: '5px',
+                        padding: '0.3rem',
+                        minWidth: '50px', // Defina o tamanho mínimo aqui
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                      }}
+                    >
+                      <span>{file.name}</span>
+                      <button
+                        className="btn remove-file-button"
+                        onClick={() => handleRemoveSelectedFile(file)}
+                        style={{ color: 'red', marginLeft: '0.5rem', padding: 0 }}
+                      >
+                        X
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div style={{ marginBottom: '1rem' }}>
+            <label>Data:</label>
+            <DatePicker
+              selected={selectedDate}
+              onChange={handleDateChange}
+              dayClassName={(date) => getDateColor(date)}
+              locale={ptBR} // Define a localização em português
+            />
+          </div>
+        </Modal.Body>
+        <Modal.Footer style={{ display: 'flex', justifyContent: 'center' }}>
+          <Button className="button button-cancel link-no-underline" variant="secondary" onClick={handleClose}>
+            Cancelar
+          </Button>
+          <Button className="button button-login link-no-underline" variant="primary" onClick={handleClose}>
+            Cadastrar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/*modal de habilitar vagas*/}
       {/* Modal de Habilitar Vagas */}
       <Modal show={showHabilitarVagasModal} onHide={handleCloseHabilitarVagas}>
         <Modal.Header closeButton>
-          <Modal.Title>Agendar uma Visita</Modal.Title>
+          <Modal.Title>Habilitar Vagas para Visita</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div style={{ marginBottom: '1rem' }}>
@@ -239,9 +339,10 @@ const handleFileChange = (e) => {
           </Button>
         </Modal.Footer>
       </Modal>
+
         
     </div>
   );
 };
 
-export default PrincipalScreen;
+export default PrincipalProfScreen;
